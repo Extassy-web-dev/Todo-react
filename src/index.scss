@@ -96,9 +96,8 @@ body {
                 }
 
                 &__elems {
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-items: center;
+                    display: grid;
+                    grid-template-columns: repeat(3,1fr);
                     gap: 20px;
                 }
 
@@ -121,6 +120,10 @@ body {
                             font-family: Gilroy;
                             font-weight: 600;
                             font-size: 18px;
+                        }
+
+                        span.active {
+                            text-decoration: line-through red 2px;
                         }
                     }
 
