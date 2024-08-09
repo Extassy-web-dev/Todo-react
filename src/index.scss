@@ -120,9 +120,11 @@ body {
                             font-family: Gilroy;
                             font-weight: 600;
                             font-size: 18px;
+                            transition: all .4s easy;
                         }
 
                         span.active {
+                            transition: all .4s easy;
                             text-decoration: line-through red 2px;
                         }
                     }
@@ -144,7 +146,7 @@ body {
                         align-items: center;
                         border: none;
                         background: none;
-                        
+                        cursor: pointer;
                         img {
                             width: 20px;
                             height: 20px;
