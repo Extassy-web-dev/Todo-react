@@ -17,6 +17,16 @@ function App() {
     setData(updatedTodo)
   }
 
+   useEffect(() => {
+    let spans = document.querySelectorAll("span")
+
+    spans.forEach(item => {
+      item.onclick = () => {
+        item.classList.toggle("active")
+      }
+    })
+  })
+
   return (
     <>
       <div className="main">
@@ -34,9 +44,7 @@ function App() {
                 return (
                   <div key={i} className="todo__elem">
                     <div className="top">
-                      <span onClick={() => {
-                        document.querySelectorAll("span").forEach(item => item.style.textDecoration = "line-through red")
-                      }}>{item}</span>
+                      <span>{item}</span>
                       <button onClick={() => {deleteTodo(i)}}><img src="../cross.svg" alt="cross" /></button>
                     </div>
                     <p><i>{new Date().getHours()}:{new Date().getMinutes()}</i></p>
